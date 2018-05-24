@@ -1,0 +1,35 @@
+<ion-header>
+    <ion-navbar color="alcon-green">
+      <ion-title>
+        BMR
+      </ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding>
+   <ion-list>
+    <ion-title>การเผาผลาญพลังงาน</ion-title>
+    <ion-item>
+        <ion-label >น้ำหนัก : </ion-label>
+      <ion-input type="text" placeholder=" - KG - " [(ngModel)]="weight"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+        <ion-label >ส่วนสูง : </ion-label>
+      <ion-input type="text" placeholder=" - CM - " [(ngModel)]="height"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label >อายุ : </ion-label>
+      <ion-input type="text" placeholder=" - CM - " [(ngModel)]="age"></ion-input>
+    </ion-item>
+  </ion-list>
+  
+    <div padding>
+      <button ion-button block color="danger" (click)="CalbmrMen()">ชาย</button>
+      <button ion-button block color="danger" (click)="CalbmrWomen()">หญิง</button>
+   </div>
+   
+   <h4>ค่า BMR : {{bmr |number:'1.2-2'}}</h4>
+    
+  </ion-content>

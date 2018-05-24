@@ -1,0 +1,29 @@
+<ion-header>
+    <ion-navbar color="alcon-green">
+      <ion-title>
+        BMR
+      </ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding>
+   <ion-list>
+    <ion-title>การเผาผลาญพลังงาน</ion-title>
+
+    <ion-item>
+        <ion-label >ค่า BMR : </ion-label>
+      <ion-input type="text" placeholder=" - CM - " [(ngModel)]="bmr"></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-title>การออกกำลังกายต่อสัปดาห์</ion-title>
+    <div padding>
+      <button ion-button block color="danger" (click)="caltdee1()">น้อยมากหรือไม่ออกเลย</button>
+      <button ion-button block color="danger" (click)="caltdee2()">1-3ครั้ง / สัปดาห์</button>
+      <button ion-button block color="danger" (click)="caltdee3()">4-5 ครั้ง / สัปดาห์</button>
+      <button ion-button block color="danger" (click)="caltdee4()">6-7 ครั้ง / สัปดาห์</button>
+      <button ion-button block color="danger" (click)="caltdee5()">วัลละ 2 ครั้งขึ้นไป</button>
+   </div>
+   
+   <h4>ค่า TDEE : {{tdee |number:'1.2-2'}}</h4>
+    
+  </ion-content>

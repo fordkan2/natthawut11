@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar color="alcon-green">
+    <ion-title>
+      BMI
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+ <ion-list>
+  <ion-title>การหาค่าดัชนีมวลกาย</ion-title>
+  <ion-item>
+      <ion-label >น้ำหนัก : </ion-label>
+    <ion-input type="text" placeholder=" - KG - " [(ngModel)]="weight"></ion-input>
+  </ion-item>
+
+  <ion-item>
+      <ion-label >ส่วนสูง : </ion-label>
+    <ion-input type="text" placeholder=" - CM - " [(ngModel)]="height"></ion-input>
+  </ion-item>
+</ion-list>
+
+  <div padding>
+    <button ion-button block color="primary" (click)="calculator()">คำนวณ</button>
+    <button ion-button block color="secondary" (click)="ShowAlert()">เทียบเกณฑ์ BMI</button>
+ </div>
+ <h4>ค่า BMI : {{bmi |number:'1.2-2'}}</h4>
+
+  
+</ion-content>
